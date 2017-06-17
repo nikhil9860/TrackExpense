@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#f4d042"
+    android:id="@+id/trackepenseDrawerLayout"
+    tools:context="com.example.nikhil.trackexpense.HomeActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="top|center"
+    android:textColor="#000000"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Welcome to Track Expense"
+        android:textColor="#000000"
+
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/trackExpenseTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Total Expense is : "
+        android:fontFamily="sans-serif-light"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/trackExpenseMonthTotal"
+        android:text="Your Current Month Expense :"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        />
+
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/recentspendrecordfragment"
+        class="com.example.nikhil.trackexpense.RecentSpendFragment"
+        />
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/currentmonthrecordfragments"
+        class="com.example.nikhil.trackexpense.CurrentMonthFragment"
+        />
+
+
+</LinearLayout>
+
+
+    <android.support.design.widget.NavigationView
+
+        android:id="@+id/expenseNavigationview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/track_expense_menu"
+        android:background="#4c9f30"
+        ></android.support.design.widget.NavigationView>
+
+
+
+
+
+</android.support.v4.widget.DrawerLayout>
