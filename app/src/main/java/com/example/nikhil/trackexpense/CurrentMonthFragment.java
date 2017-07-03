@@ -1,6 +1,7 @@
 package com.example.nikhil.trackexpense;
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -38,11 +39,10 @@ public class CurrentMonthFragment extends Fragment {
         String month = calendar.getDisplayName(calendar.MONTH,calendar.LONG,Locale.getDefault());
         textView.setText(month+" Month Expense");
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),R.layout.custom_textview);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         listView.setAdapter(adapter);
         dataBaseHelper.viewCurrentMonthExpense(adapter);
-
         return view;
     }
 }

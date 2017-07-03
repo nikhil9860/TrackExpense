@@ -30,7 +30,7 @@ public class RecentSpendFragment extends Fragment {
         View view = inflater.inflate(R.layout.recent_record_fragment,container);
         dataBaseHelper = new DataBaseHelper(getActivity());
         listView = (ListView)view.findViewById(R.id.listviewrecentexpense);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(),R.layout.custom_textview);
         arrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         listView.setAdapter(arrayAdapter);
         dataBaseHelper.recendExpense(arrayAdapter);

@@ -24,6 +24,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         private Context context;
 
     private String amount,discp,cat,dt;
+    String amt,dis,c,m,d;
     private EditActivity editActivity;
 
 
@@ -78,8 +79,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             cv.put("Mop",mop);
             cv.put("expdate",date);
             cv.put("expense_month",month);
-
-
             db.insert("expense",null,cv);
 
             return true;
@@ -112,21 +111,21 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
 
 public void updateExpense(){
+
+
+
     try {
-
-       editActivity  = new EditActivity();
-        editActivity.amt=12;
-
-        editActivity.setDispcriton("nikhil");
-
+        editActivity = new EditActivity();
         SQLiteDatabase sb= getReadableDatabase();
         String sql="select * from expense where amount like '"+amount+"' and category like '"+cat+"' and discreption like '"+discp+"%' and expdate like '"+dt+"'";
         Cursor cursor = sb.rawQuery(sql,null);
         if (cursor.moveToFirst()){
             while (!cursor.isAfterLast()){
-
-
-
+                amt = cursor.getString(0);
+                c=cursor.getString(1);
+                dis=cursor.getString(2);
+                m=cursor.getString(3);
+                d=cursor.getString(4);
                 cursor.moveToNext();
             }
         }
@@ -248,8 +247,6 @@ public void updateExpense(){
             st= ""+i;
         c.close();
 
-
-
         return  st;
     }
 
@@ -266,18 +263,9 @@ public void updateExpense(){
         Cursor c = sb.rawQuery(sql,null);
         c.moveToFirst();
         i=c.getInt(0);
-
-
         totalmonthexpense=i+"";
-
-
-
-
         return  totalmonthexpense;
 
     }
-
-
-
 
 }

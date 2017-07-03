@@ -6,9 +6,8 @@
     android:layout_height="match_parent"
     android:gravity="center|top"
     android:orientation="vertical"
+    android:background="#0c0d15"
     tools:context="com.example.nikhil.trackexpense.AddExpenseActivity">
-
-
 
 
     <EditText
@@ -17,43 +16,165 @@
         android:hint="Amount"
         android:inputType="number"
         android:id="@+id/editTextAmount"
-
+        android:textColor="#0c0d15"
+        android:background="#f2f0fa"
+        android:layout_margin="5dp"
         />
 
-
-    <Spinner
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextSpinnerCategory"
-        ></Spinner>
+        android:text="Category:"
+        android:id="@+id/textviewcatogey"
+        android:textSize="18dp"
+        android:layout_gravity="left"
+        android:textColor="#f2f0fa"
+        android:layout_margin="5dp"
+        />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:background="#f2f0fa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="left"
+            android:id="@+id/radiocatergorygroup"
+            android:layout_margin="5dp"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food"
+                android:id="@+id/radiofood"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entertainment"
+                android:id="@+id/radioentertaimnet"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Travel"
+                android:id="@+id/radiotravel"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shopping"
+                android:id="@+id/radioshopping"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bills"
+                android:id="@+id/radiobills"
+                />
+
+
+        </RadioGroup>
+
+
+    </HorizontalScrollView>
+
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Description"
         android:id="@+id/editTextDescription"
+        android:textColor="#0c0d15"
+        android:background="#f2f0fa"
+        android:layout_margin="5dp"
         />
 
-    <Spinner
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode Of Payment:"
+        android:textSize="18dp"
+        android:id="@+id/moptextview"
+        android:layout_gravity="left"
+        android:textColor="#f2f0fa"
+        android:layout_margin="5dp"
+        />
+
+
+    <RadioGroup
+        android:background="#f2f0fa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextSpinnerMOP"
-        ></Spinner>
+        android:orientation="horizontal"
+        android:id="@+id/mopcategory"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash"
+            android:id="@+id/mopcash"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Debit Card"
+            android:id="@+id/mopdebitcard"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit Card"
+            android:id="@+id/mopcreditcard"
+            />
 
+
+    </RadioGroup>
 
     <DatePicker
+        android:layout_margin="10dp"
         android:id="@+id/editdate"
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:datePickerMode="spinner"
         android:calendarViewShown="false"
+        android:background="#f2f0fa"
         ></DatePicker>
 
-    <Button
-        android:layout_width="wrap_content"
+    <AbsoluteLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SAVE"
-        android:onClick="saveExp"
-        />
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <Button
+
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="90dp"
+            android:layout_y="4dp"
+            android:onClick="validate"
+            android:text="save" />
+
+        <Button
+            android:id="@+id/button"
+            android:text="Canel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="203dp"
+            android:layout_y="2dp" />
+
+
+    </AbsoluteLayout>
+
 
 </LinearLayout>
+

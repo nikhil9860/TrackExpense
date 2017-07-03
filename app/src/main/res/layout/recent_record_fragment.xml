@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="Recent Spends :"
         android:fontFamily="sans-serif-light"
-        android:textColor="#000000"
+        android:textColor="#f2f0fa"
         android:textSize="20dp"
 
         />
@@ -21,6 +21,7 @@
         android:id="@+id/listviewrecentexpense"
         android:divider="@android:color/transparent"
         android:dividerHeight="12dp"
+        android:textColor="#f2f0fa"
         ></ListView>
 
 

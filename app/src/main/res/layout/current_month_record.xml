@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/currentmonthtextview"
         android:fontFamily="sans-serif-light"
-        android:textColor="#000000"
+        android:textColor="#f2f0fa"
         android:textSize="20dp"
         />
 
@@ -22,7 +22,7 @@
         android:layout_gravity="center|bottom"
         android:divider="@android:color/transparent"
         android:dividerHeight="12dp"
-
+        android:textColor="#f2f0fa"
         ></ListView>
 
 

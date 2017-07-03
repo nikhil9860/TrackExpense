@@ -1,5 +1,8 @@
 package com.example.nikhil.trackexpense;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -12,6 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+
+
 public class HomeActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
@@ -21,10 +26,12 @@ public class HomeActivity extends AppCompatActivity {
     private DataBaseHelper dataBaseHelper;
     private TextView textView,textView1;
     String total,totalmonth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         dataBaseHelper = new DataBaseHelper(this);
         drawerLayout = (DrawerLayout)findViewById(R.id.trackepenseDrawerLayout);
         navigationView = (NavigationView)findViewById(R.id.expenseNavigationview);
@@ -68,7 +75,9 @@ public class HomeActivity extends AppCompatActivity {
         totalmonth= dataBaseHelper.totalMonthExpense();
         textView.append(total);
         textView1.append(totalmonth);
+
     }
+
 
 
     @Override
@@ -83,7 +92,6 @@ public class HomeActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 
 
 

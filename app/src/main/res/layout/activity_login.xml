@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nikhil.trackexpense.LoginActivity"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    android:layout_gravity="center"
+    >
+
+
+    <EditText
+        android:id="@+id/editudername"
+        android:layout_width="288dp"
+        android:layout_height="35dp"
+        android:layout_x="30dp"
+        android:layout_y="81dp"
+        android:background="#FAFAFA"
+        android:hint=" Username"
+        android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+        />
+
+    <EditText
+        android:id="@+id/editpassword"
+        android:inputType="textPassword"
+        android:layout_width="288dp"
+        android:layout_height="35dp"
+        android:layout_x="30dp"
+        android:layout_y="146dp"
+        android:background="#FAFAFA"
+        android:hint=" Password"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
+        />
+
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:layout_x="35dp"
+        android:layout_y="223dp"
+        android:background="#009688"
+        android:textColor="#f2f0fa"
+        android:textSize="20dp"
+        android:text="LOGIN"
+        />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="68dp"
+        android:layout_y="487dp"
+        android:text="Developed By Nikhil Gaikwad ©"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_x="164dp"
+        android:layout_y="59dp"
+        android:text="___"
+        android:textColor="#009688"
+
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="87dp"
+        android:layout_y="28dp"
+        android:text="WELCOME BACK !"
+        android:textColor="#000"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textViewerror"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:background="#858C93"
+        android:text="Username or Password Incorrect"
+        android:visibility="invisible"
+        android:textColor="#FAFAFA"
+        android:textSize="20dp" />
+
+</AbsoluteLayout>
